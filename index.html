@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Dashboard 📊✨</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6e48aa, #9b59b6);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #3498db, #8e44ad);
+            padding: 2rem;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(5px);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h2 {
+            color: #f1c40f;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .tableau-container {
+            position: relative;
+            padding-bottom: 2rem;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .tableau-container::before {
+            content: "🔍 Featured Analytics";
+            position: absolute;
+            top: -1.5rem;
+            left: 1rem;
+            background: #e74c3c;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(90deg, #34495e, #2c3e50);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Analytics Hub 📈🚀</h1>
+        <p>Unlock Insights with Style! ✨</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview 🌟</a></li>
+            <li><a href="#tableau">Tableau Insights 📊</a></li>
+            <li><a href="#stats">Quick Stats ⚡</a></li>
+            <li><a href="#contact">Contact Us 📧</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="overview">
+            <h2>Welcome to Our Analytics World! 🌍</h2>
+            <p>Dive into the data with us! We bring you cutting-edge insights powered by Tableau, wrapped in a fun and colorful package. Ready to explore? 😎</p>
+        </section>
+
+        <section id="tableau">
+            <h2 class="pulse">Interactive Tableau Dashboard 📊</h2>
+            <p>Explore our featured dashboard below – it’s the star of the show! 🌟</p>
+            <div class="tableau-container">
+                <iframe 
+                    src="https://public.tableau.com/views/_17431465080190/Dashboard2?:language=en-US&:showVizHome=no&:embed=true&:display_count=n&:origin=viz_share_link" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0">
+                </iframe>
+            </div>
+        </section>
+
+        <section id="stats">
+            <h2>Quick Stats at a Glance ⚡</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Users 👥</h3>
+                    <p>10,000+</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Data Points 📍</h3>
+                    <p>1M+</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Insights 💡</h3>
+                    <p>500+</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch! 📞</h2>
+            <p>Have questions? Reach out at <a href="mailto:info@datahub.com" style="color: #f1c40f;">info@datahub.com</a> or tweet us @DataHub! 🐦</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Data Analytics Hub | Made with ❤️ & Data 📊</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic greeting based on time
+        const greeting = document.querySelector('header p');
+        const hour = new Date().getHours();
+        if (hour < 12) greeting.textContent = "Good Morning! Unlock Insights with Style! 🌞";
+        else if (hour < 18) greeting.textContent = "Good Afternoon! Unlock Insights with Style! ☀️";
+        else greeting.textContent = "Good Evening! Unlock Insights with Style! 🌙";
+    </script>
+</body>
+</html>
